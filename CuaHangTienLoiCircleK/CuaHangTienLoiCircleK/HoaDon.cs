@@ -178,9 +178,58 @@ namespace CuaHangTienLoiCircleK
         }
 
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+{
+    // Kiểm tra chỉ số dòng và cột hợp lệ
+    if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
 
+    var dgv = sender as DataGridView;
+    var row = dgv.Rows[e.RowIndex];
+
+    // Kiểm tra dữ liệu trong ô
+    if (row.Cells["MaSP"].Value == null || row.Cells["TenSP"].Value == null || row.Cells["GiaSP"].Value == null)
+    {
+        MessageBox.Show("Dữ liệu không hợp lệ");
+        return;
+    }
+
+    string masp = row.Cells["MaSP"].Value.ToString();
+    string tensp = row.Cells["TenSP"].Value.ToString();
+    string giasp = row.Cells["GiaSP"].Value.ToString();
+
+    bool tangchua = false;
+
+    // Kiểm tra nếu sản phẩm đã tồn tại trong dgvView
+    for (int i = 0; i < dgvView.Rows.Count; i++)
+    {
+        if (!dgvView.Rows[i].IsNewRow && masp == dgvView.Rows[i].Cells["maSp"].Value.ToString())
+        {
+            int soluong = int.Parse(dgvView.Rows[i].Cells["soLuong"].Value.ToString());
+            soluong++;
+            dgvView.Rows[i].Cells["soLuong"].Value = soluong;
+            tangchua = true;
+            break;
         }
+    }
+
+    // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới
+    if (!tangchua)
+    {
+        dgvView.Rows.Add(masp, tensp, giasp, 1, giasp);
+    }
+
+    // Giảm số lượng sản phẩm trong dgvHoaDon
+    int soLuong = int.Parse(row.Cells["soLuong"].Value.ToString());
+    if (soLuong > 0)
+    {
+        soLuong--;
+        row.Cells["soLuong"].Value = soLuong;
+    }
+    else
+    {
+        MessageBox.Show("Số lượng không đủ để trừ");
+    }
+}
+
 
         private void btnXoaChiTietDonHang_Click(object sender, EventArgs e)
         {
@@ -200,53 +249,59 @@ namespace CuaHangTienLoiCircleK
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            double tong = TinhTongTien();
-            connection.Open();
-            var cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "ThemHoaDon";
-
-            cmd.Parameters.AddWithValue("@MaKH", cboMaKH.Text);
-            cmd.Parameters.AddWithValue("@MaNV", cboMaNV.Text);
-            cmd.Parameters.AddWithValue("@NgayXuat", DateTime.Now);
-            cmd.Parameters.AddWithValue("@TongTien", tong);
-            cmd.Parameters.AddWithValue("@PhuongThucThanhToan", cboPTThanhToan.Text);
-            cmd.Parameters.AddWithValue("@GiamGia", txtGiamGia.Text);
-            cmd.Parameters.AddWithValue("@TienSauKhiGiam", txtTongTien.Text);
-
-            var reader = cmd.ExecuteReader();
-            reader.Read();
-            maHD = reader["MaHD"].ToString();
-            connection.Close();
-
-            for (int i = 0; i < dgvView.Rows.Count - 1; i++)
+            try
             {
-                connection.Open();
-                var cmd2 = connection.CreateCommand();
-                cmd2.CommandType = CommandType.StoredProcedure;
-                cmd2.CommandText = "ThemChiTietHoaDon";
-                cmd2.Parameters.AddWithValue("@MaHD", maHD);
-                cmd2.Parameters.AddWithValue("@MaSP", dgvView.Rows[i].Cells["maSp"].Value.ToString());
-                cmd2.Parameters.AddWithValue("@SoLuong", dgvView.Rows[i].Cells["soLuong"].Value.ToString());
-                cmd2.Parameters.AddWithValue("@ThanhTien", dgvView.Rows[i].Cells["thanhTien"].Value.ToString());
-                cmd2.ExecuteNonQuery();
-                connection.Close();
-                string maCH = cbCuaHang.SelectedValue.ToString();
-                string soLuong = dgvView.Rows[i].Cells["soLuong"].Value.ToString();
-                string maSP = d.Rows[i].Cells["maSp"].Value.ToString();
-                connection.Open();
-                var cmd3 = connection.CreateCommand();
-                cmd3.CommandType = CommandType.Text;
-                cmd3.CommandText = $"update NHAKHO set SoLuong = SoLuong - {soLuong} " +
-                    $"where NHAKHO.MaSP = '{maSP}' and NHAKHO.MaCH = '{maCH}'";
-                cmd3.ExecuteNonQuery();
-                connection.Close();
-            }
-            MessageBox.Show("Thanh Toán Thành Công");
-            var dgv = tabView.SelectedTab.Controls[0] as DataGridView;
-            dgv.DataSource = LoadSanPhamTheoNCC(tabView.SelectedTab);
+                double tong = TinhTongTien();
 
+                if (string.IsNullOrEmpty(cboMaKH.Text) || string.IsNullOrEmpty(cboMaNV.Text) ||
+                    string.IsNullOrEmpty(cboPTThanhToan.Text) || string.IsNullOrEmpty(txtGiamGia.Text) ||
+                    string.IsNullOrEmpty(txtTongTien.Text))
+                {
+                    MessageBox.Show("Vui lòng điền đầy đủ thông tin trước khi thanh toán.");
+                    return;
+                }
+
+                double giamGia;
+                if (!double.TryParse(txtGiamGia.Text, out giamGia))
+                {
+                    MessageBox.Show("Giảm giá không hợp lệ.");
+                    return;
+                }
+
+                connection.Open();
+                var cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ThemHoaDon";
+
+                cmd.Parameters.AddWithValue("@MaKH", cboMaKH.Text);
+                cmd.Parameters.AddWithValue("@MaNV", cboMaNV.Text);
+                cmd.Parameters.AddWithValue("@NgayXuat", DateTime.Now);
+                cmd.Parameters.AddWithValue("@TongTien", tong);
+                cmd.Parameters.AddWithValue("@PhuongThucThanhToan", cboPTThanhToan.Text);
+                cmd.Parameters.AddWithValue("@GiamGia", giamGia);
+                cmd.Parameters.AddWithValue("@TienSauKhiGiam", txtTongTien.Text);
+
+                object maHDObj = cmd.ExecuteScalar();
+                if (maHDObj == null)
+                {
+                    MessageBox.Show("Không thể tạo hóa đơn. Vui lòng kiểm tra lại.");
+                    return;
+                }
+                maHD = maHDObj.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
+
 
         private double TinhTongTien()
         {
