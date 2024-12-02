@@ -1,0 +1,86 @@
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe.config
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.pdb
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.AssemblyReference.cache
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangKy.resources
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.DangNhap.resources
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.HoaDon.resources
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.Properties.Resources.resources
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmTrangChu.resources
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.GenerateResource.cache
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.CoreCompileInputs.cache
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.exe
+D:\Dung\UngDung\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.pdb
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe.config
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.pdb
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.AssemblyReference.cache
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.SuggestedBindingRedirects.cache
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangKy.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangNhap.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.HoaDon.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.Properties.Resources.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmTrangChu.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.GenerateResource.cache
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.CoreCompileInputs.cache
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.exe
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.pdb
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmNhaCungCap.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmSanPham.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmHeThongCuaHang.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmKhoHang.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmLuongNhanVien.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmNhanVien.resources
+D:\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmKhachHang.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe.config
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.pdb
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.AssemblyReference.cache
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangKy.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangNhap.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmHeThongCuaHang.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmHoaDon.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmKhachHang.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmKhoHang.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmLuongNhanVien.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmNhaCungCap.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmNhanVien.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.Properties.Resources.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmSanPham.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmTrangChu.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.GenerateResource.cache
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.CoreCompileInputs.cache
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.exe
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.pdb
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDoanhThuKhachHang.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDoanhThuSanPham.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmInHoaDon.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmInKhachHang.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmInNhanVien.resources
+E:\Bài Tập 2024\LTUD 2024\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmTraCuuHoaDon.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe.config
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.exe
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\bin\Debug\CuaHangTienLoiCircleK.pdb
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.AssemblyReference.cache
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangKy.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDangNhap.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDoanhThuKhachHang.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmDoanhThuSanPham.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmHeThongCuaHang.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmHoaDon.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmInHoaDon.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmInKhachHang.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmInNhanVien.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmKhachHang.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmKhoHang.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmLuongNhanVien.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmNhaCungCap.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmNhanVien.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.Properties.Resources.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmSanPham.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmTraCuuHoaDon.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.frmTrangChu.resources
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.GenerateResource.cache
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.csproj.CoreCompileInputs.cache
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.exe
+E:\DoAn\CuaHangTienLoiCircleK\CuaHangTienLoiCircleK\obj\Debug\CuaHangTienLoiCircleK.pdb

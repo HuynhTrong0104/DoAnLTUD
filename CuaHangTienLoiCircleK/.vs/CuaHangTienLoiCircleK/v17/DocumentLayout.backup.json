@@ -1,0 +1,625 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\DoAn\\CuaHangTienLoiCircleK\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|e:\\doan\\cuahangtienloicirclek\\cuahangtienloicirclek\\luongnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\luongnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\luongnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\luongnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|e:\\doan\\cuahangtienloicirclek\\cuahangtienloicirclek\\hoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\hoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\inhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\inhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\datakhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\datakhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|e:\\doan\\cuahangtienloicirclek\\cuahangtienloicirclek\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\khachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|e:\\doan\\cuahangtienloicirclek\\cuahangtienloicirclek\\luongnhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\luongnhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\khohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|e:\\doan\\cuahangtienloicirclek\\cuahangtienloicirclek\\inkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\inkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\connect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\connect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\trangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Git\\ReleaseNotes.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\luongvakhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\luongvakhohang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\dbketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\dbketnoi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\innhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\innhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\hethongcuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\hethongcuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\hethongcuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\hethongcuahang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\tracuuhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\tracuuhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\doanhthusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\doanhthusanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\nhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\sanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\sanpham.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\datahoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\datahoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\doanhthukhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\doanhthukhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\nhacungcap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\nhacungcap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|E:\\DoAn\\CuaHangTienLoiCircleK\\cuahangtienloicirclek\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE7C28D1-5409-4710-841F-5462098E2CAE}|CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK.csproj|solutionrelative:cuahangtienloicirclek\\dangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 29,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TrangChu.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TrangChu.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\TrangChu.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TrangChu.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\TrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:42:49.801Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HoaDon.Designer.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HoaDon.Designer.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\HoaDon.Designer.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HoaDon.Designer.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\HoaDon.Designer.cs",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAAAAUBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:34:50.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KhachHang.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhachHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\KhachHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhachHang.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\KhachHang.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAjwIUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T09:00:06.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LuongNhanVien.Designer.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongNhanVien.Designer.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\LuongNhanVien.Designer.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongNhanVien.Designer.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\LuongNhanVien.Designer.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAwwLAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T08:46:24.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LuongNhanVien.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongNhanVien.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\LuongNhanVien.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongNhanVien.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\LuongNhanVien.cs",
+              "ViewState": "AgIAAPIAAAAAAAAAAAArwBABAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T08:41:46.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReleaseNotes.html",
+              "DocumentMoniker": "C:\\Git\\ReleaseNotes.html",
+              "ToolTip": "C:\\Git\\ReleaseNotes.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-02T06:22:22.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LuongVaKhoHang.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongVaKhoHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\LuongVaKhoHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongVaKhoHang.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\LuongVaKhoHang.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAAwC8BAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T05:15:25.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "KhoHang.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhoHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\KhoHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhoHang.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\KhoHang.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAswAMBAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:21:36.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "NhanVien.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhanVien.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\NhanVien.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhanVien.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\NhanVien.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAQwIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:16:57.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HeThongCuaHang.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HeThongCuaHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\HeThongCuaHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HeThongCuaHang.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\HeThongCuaHang.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAowH4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:07:25.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SanPham.Designer.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.Designer.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\SanPham.Designer.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.Designer.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\SanPham.Designer.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAjwE4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:36:24.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\SanPham.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\SanPham.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:36:16.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "NhaCungCap.Designer.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.Designer.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\NhaCungCap.Designer.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.Designer.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\NhaCungCap.Designer.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAmwK0AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:52:10.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "NhaCungCap.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\NhaCungCap.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\NhaCungCap.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAUwEMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:51:57.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DataHoaDon.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DataHoaDon.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DataHoaDon.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DataHoaDon.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\DataHoaDon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:47:53.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DaTaKhachHang.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DaTaKhachHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DaTaKhachHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DaTaKhachHang.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\DaTaKhachHang.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAwwFgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:36:11.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DBKetNoi.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DBKetNoi.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DBKetNoi.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DBKetNoi.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\DBKetNoi.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBYAAAB/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:24:27.277Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Connect.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\Connect.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\Connect.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\Connect.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\Connect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:21:52.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "DangNhap.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangNhap.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DangNhap.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangNhap.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\DangNhap.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:32:42.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InKhachHang.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InKhachHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\InKhachHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InKhachHang.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\InKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:22:49.593Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "InNhanVien.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InNhanVien.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\InNhanVien.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InNhanVien.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:21:50.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TrangChu.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TrangChu.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\TrangChu.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TrangChu.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\TrangChu.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAlwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:18:07.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TraCuuHoaDon.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TraCuuHoaDon.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\TraCuuHoaDon.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TraCuuHoaDon.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\TraCuuHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:16:33.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "NhaCungCap.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\NhaCungCap.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhaCungCap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:11:03.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LuongNhanVien.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongNhanVien.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\LuongNhanVien.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\LuongNhanVien.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\LuongNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:09:00.702Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "KhoHang.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhoHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\KhoHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhoHang.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\KhoHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:08:03.441Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HeThongCuaHang.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HeThongCuaHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\HeThongCuaHang.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HeThongCuaHang.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HeThongCuaHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:02:25.404Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "InHoaDon.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InHoaDon.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\InHoaDon.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\InHoaDon.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\InHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:50:11.16Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DoanhThuKhachHang.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DoanhThuKhachHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DoanhThuKhachHang.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DoanhThuKhachHang.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DoanhThuKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:46:21.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HoaDon.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HoaDon.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\HoaDon.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HoaDon.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\HoaDon.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAawK8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:40:16.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DoanhThuSanPham.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DoanhThuSanPham.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DoanhThuSanPham.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DoanhThuSanPham.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DoanhThuSanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:38:04.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "SanPham.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\SanPham.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\SanPham.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T04:44:48.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HoaDon.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HoaDon.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\HoaDon.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\HoaDon.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\HoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T08:17:32.409Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\Program.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\Program.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\Program.cs",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T06:15:41.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "DangNhap.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangNhap.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DangNhap.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangNhap.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T06:08:48.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DangKy.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangKy.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\DangKy.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangKy.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\DangKy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:37:14.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NhanVien.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhanVien.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\NhanVien.cs",
+              "ToolTip": "E:\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhanVien.cs [Design]",
+              "RelativeToolTip": "..\\..\\B\u00E0i T\u1EADp 2024\\LTUD 2024\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\NhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:43:49.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "KhachHang.cs [Design]",
+              "DocumentMoniker": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhachHang.cs",
+              "RelativeDocumentMoniker": "CuaHangTienLoiCircleK\\KhachHang.cs",
+              "ToolTip": "E:\\DoAn\\CuaHangTienLoiCircleK\\CuaHangTienLoiCircleK\\KhachHang.cs [Design]",
+              "RelativeToolTip": "CuaHangTienLoiCircleK\\KhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T03:43:31.037Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
