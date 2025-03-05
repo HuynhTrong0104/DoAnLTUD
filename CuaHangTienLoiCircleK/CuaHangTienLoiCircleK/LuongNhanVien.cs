@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -30,12 +31,14 @@ namespace CuaHangTienLoiCircleK
 
         private void frmLuongNhanVien_Load(object sender, EventArgs e)
         {
+            dgvView.ReadOnly = true;
+            dgvView.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvView.DataSource = luong.LayDSLuong();
 
             DataTable dtKhachHang = luong.layDanhSachNhanVien();
             cboMaNV.DataSource = dtKhachHang;
-            cboMaNV.DisplayMember = "Manv"; // Tên cột hiển thị tên khách hàng
-            cboMaNV.ValueMember = "Manv"; // Tên cột chứa mã khách hàng
+            cboMaNV.DisplayMember = "Manv"; 
+            cboMaNV.ValueMember = "Manv"; 
             cboMaNV.SelectedIndexChanged += cboMaNV_SelectedIndexChanged;
         }
         private void txtLuong_Validating(object sender, CancelEventArgs e)
@@ -94,7 +97,6 @@ namespace CuaHangTienLoiCircleK
                     txtTenNhanVien.Text = string.Empty;
                 }
 
-                // hiện thị đúng với ngày sinh mà mình đã chọn ra tên 
                 if (drv["NgaySinh"] != DBNull.Value)
                 {
                     DateTime ngaySinh = (DateTime)drv["NgaySinh"];
@@ -105,12 +107,23 @@ namespace CuaHangTienLoiCircleK
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            string maLg = txtMaLuong.Text.Trim();
+            string maNV = cboMaNV.Text.Trim();
+            string tenNV = txtTenNhanVien.Text.Trim();
+            string ngaysinh = dtpNgaySinh.Text.Trim();
+           
+            if (string.IsNullOrEmpty(maLg) || string.IsNullOrEmpty(maNV) || string.IsNullOrEmpty(tenNV) 
+                || string.IsNullOrEmpty(ngaysinh))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 string MaLuong = txtMaLuong.Text;
                 if (luong.KiemTraMaLuongTonTai(MaLuong))
                 {
-                    MessageBox.Show("Mã lương đã tồn tại. Vui lòng nhập mã lương khác.");
+                    MessageBox.Show("Mã lương đã tồn tại. Vui lòng nhập mã lương khác.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     return;
                 }
 
@@ -129,7 +142,7 @@ namespace CuaHangTienLoiCircleK
                 // Call ThemLuong with the correct number and type of arguments
                 if (luong.ThemLuong(MaLuong, Manv, phuCap, tangCa, thuong, NgaySinh, luongCB, tongLuong) >= 0)
                 {
-                    MessageBox.Show("Thêm thành công!");
+                    MessageBox.Show("Thêm thành công!","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Question);
                     // Clear the inputs and refresh the DataGridView
                     txtMaLuong.Clear();
                     txtPhuCap.Clear();
@@ -141,27 +154,38 @@ namespace CuaHangTienLoiCircleK
                 }
                 else
                 {
-                    MessageBox.Show("Thêm không thành công!");
+                    MessageBox.Show("Thêm không thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("Lỗi định dạng: " + ex.Message); // Bắt lỗi định dạng số
+                MessageBox.Show("Lỗi định dạng: " + ex.Message); 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi không xác định: " + ex.Message); // Bắt lỗi chung
+                MessageBox.Show("Lỗi không xác định: " + ex.Message); 
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            string maLg = txtMaLuong.Text.Trim();
+            string maNV = cboMaNV.Text.Trim();
+            string tenNV = txtTenNhanVien.Text.Trim();
+            string ngaysinh = dtpNgaySinh.Text.Trim();
+
+            if (string.IsNullOrEmpty(maLg) || string.IsNullOrEmpty(maNV) || string.IsNullOrEmpty(tenNV)
+                || string.IsNullOrEmpty(ngaysinh))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 string MaLuong = txtMaLuong.Text;
                 if (string.IsNullOrEmpty(MaLuong))
                 {
-                    MessageBox.Show("Vui lòng chọn một bản ghi để sửa.");
+                    MessageBox.Show("Vui lòng chọn một bản ghi để sửa.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     return;
                 }
 
@@ -176,12 +200,12 @@ namespace CuaHangTienLoiCircleK
                 int result = luong.SuaLuong(MaLuong, Manv, phuCap, tangCa, thuong, NgaySinh, luongCB, tongLuong);
                 if (result > 0)
                 {
-                    MessageBox.Show("Cập nhật lương thành công!");
+                    MessageBox.Show("Cập nhật lương thành công!","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Question);
                     dgvView.DataSource = luong.LayDSLuong(); // Refresh the DataGridView
                 }
                 else
                 {
-                    MessageBox.Show("Cập nhật lương không thành công.");
+                    MessageBox.Show("Cập nhật lương không thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
             }
             catch (FormatException ex)
@@ -240,10 +264,10 @@ namespace CuaHangTienLoiCircleK
 
             if (string.IsNullOrEmpty(MaLuong))
             {
-                MessageBox.Show("Vui lòng chọn hoá đơn để xóa.");
+                MessageBox.Show("Vui lòng chọn nhân viên để xóa.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 return;
             }
-            DialogResult confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa hoá đơn này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
+            DialogResult confirmResult = MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này?", "Xác nhận xóa", MessageBoxButtons.YesNo);
             if (confirmResult == DialogResult.Yes)
             {
                 try
@@ -251,12 +275,12 @@ namespace CuaHangTienLoiCircleK
                     int result = luong.XoaLuong(MaLuong);
                     if (result > 0)
                     {
-                        MessageBox.Show("Xóa hoá đơn thành công!");
-                        dgvView.DataSource = luong.LayDSLuong(); // Refresh the DataGridView
+                        MessageBox.Show("Xóa nhân viên thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        dgvView.DataSource = luong.LayDSLuong(); 
                     }
                     else
                     {
-                        MessageBox.Show("Xóa hoá đơn không thành công.");
+                        MessageBox.Show("Xóa nhân viên không thành công.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     }
                 }
                 catch (Exception ex)
@@ -269,6 +293,15 @@ namespace CuaHangTienLoiCircleK
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmLuongNhanVien_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }else e.Cancel = true;
         }
     }
 }

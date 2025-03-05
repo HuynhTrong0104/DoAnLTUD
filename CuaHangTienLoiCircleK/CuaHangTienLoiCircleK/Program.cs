@@ -16,7 +16,7 @@ namespace CuaHangTienLoiCircleK
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHoaDon());
+            Application.Run(new frmDangNhap());
         }
     }
 }

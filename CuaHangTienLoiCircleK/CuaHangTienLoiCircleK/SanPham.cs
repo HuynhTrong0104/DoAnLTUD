@@ -35,6 +35,8 @@ namespace CuaHangTienLoiCircleK
 
         private void frmSanPham_Load(object sender, EventArgs e)
         {
+            dgvView.ReadOnly = true;
+            dgvView.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvView.DataSource = LoadSanPham();
             LoaiNCC();
         }
@@ -65,36 +67,83 @@ namespace CuaHangTienLoiCircleK
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select*from SANPHAM where MaSP = '{txtMaSP.Text}'";
-            var reader = cmd.ExecuteReader();
-
-            if (reader.Read())
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(txtMaSP.Text) ||
+                string.IsNullOrWhiteSpace(txtTenSP.Text) ||
+                string.IsNullOrWhiteSpace(txtGiaSP.Text) ||
+                string.IsNullOrWhiteSpace(cboNhaCungCap.Text))
             {
-                MessageBox.Show("MaSP đã tồn tại");
-                connection.Close();
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
-                connection.Close();
-                var conn = Connect.KetNoi();
-                conn.Open();
-                cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "ThemSanPham";
-                cmd.Parameters.AddWithValue("@MaSP", txtMaSP.Text);
-                cmd.Parameters.AddWithValue("@TenSP", txtTenSP.Text);
-                cmd.Parameters.AddWithValue("@GiaSP", txtGiaSP.Text);
-                cmd.Parameters.AddWithValue("@Manhacungcap", cboNhaCungCap.Text);
+                // Kiểm tra xem MaSP đã tồn tại chưa
+                using (SqlConnection connection = Connect.KetNoi())
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = connection.CreateCommand())
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "SELECT COUNT(*) FROM SANPHAM WHERE MaSP = @MaSP";
+                        cmd.Parameters.AddWithValue("@MaSP", txtMaSP.Text);
 
-                cmd.ExecuteNonQuery();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (count > 0)
+                        {
+                            MessageBox.Show("Mã sản phẩm đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                }
 
-                conn.Close();
+                // Thêm sản phẩm mới
+                using (SqlConnection connection = Connect.KetNoi())
+                {
+                    connection.Open();
+                    using (SqlCommand cmd = connection.CreateCommand())
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.CommandText = "ThemSanPham";
+
+                        cmd.Parameters.AddWithValue("@MaSP", txtMaSP.Text);
+                        cmd.Parameters.AddWithValue("@TenSP", txtTenSP.Text);
+                        cmd.Parameters.AddWithValue("@GiaSP", txtGiaSP.Text);
+                        cmd.Parameters.AddWithValue("@Manhacungcap", cboNhaCungCap.Text);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Thêm sản phẩm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm sản phẩm thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+
+                // Làm mới DataGridView
                 dgvView.DataSource = LoadSanPham();
+
+                // Xóa thông tin nhập
+                txtMaSP.Clear();
+                txtTenSP.Clear();
+                txtGiaSP.Clear();
+                cboNhaCungCap.SelectedIndex = -1;
+                txtMaSP.Focus();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi SQL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
@@ -165,6 +214,15 @@ namespace CuaHangTienLoiCircleK
             txtTenSP.Clear();
             //cboNhaCungCap.Items.
             txtMaSP.Focus();
+        }
+
+        private void frmSanPham_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
         }
     }
 }

@@ -51,9 +51,11 @@
             this.dgvView = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -128,7 +130,7 @@
             // mtxtSDT
             // 
             this.mtxtSDT.Location = new System.Drawing.Point(597, 126);
-            this.mtxtSDT.Mask = "(999) 000-000";
+            this.mtxtSDT.Mask = "0999 000 000";
             this.mtxtSDT.Name = "mtxtSDT";
             this.mtxtSDT.Size = new System.Drawing.Size(246, 26);
             this.mtxtSDT.TabIndex = 17;
@@ -185,10 +187,10 @@
             this.rdNu.ForeColor = System.Drawing.Color.White;
             this.rdNu.Location = new System.Drawing.Point(737, 187);
             this.rdNu.Name = "rdNu";
-            this.rdNu.Size = new System.Drawing.Size(48, 23);
+            this.rdNu.Size = new System.Drawing.Size(46, 23);
             this.rdNu.TabIndex = 25;
             this.rdNu.TabStop = true;
-            this.rdNu.Text = "Nữ";
+            this.rdNu.Text = "Nu";
             this.rdNu.UseVisualStyleBackColor = true;
             // 
             // btnQuayLai
@@ -196,9 +198,9 @@
             this.btnQuayLai.BackColor = System.Drawing.Color.DarkRed;
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuayLai.ForeColor = System.Drawing.Color.White;
-            this.btnQuayLai.Location = new System.Drawing.Point(769, 329);
+            this.btnQuayLai.Location = new System.Drawing.Point(486, 247);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(106, 29);
+            this.btnQuayLai.Size = new System.Drawing.Size(108, 37);
             this.btnQuayLai.TabIndex = 29;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = false;
@@ -251,6 +253,7 @@
             this.dgvView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvView.Location = new System.Drawing.Point(0, 364);
             this.dgvView.Name = "dgvView";
+            this.dgvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvView.Size = new System.Drawing.Size(887, 175);
             this.dgvView.TabIndex = 30;
             this.dgvView.Click += new System.EventHandler(this.dgvView_Click);
@@ -279,12 +282,24 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::CuaHangTienLoiCircleK.Properties.Resources.logo1;
+            this.pictureBox2.Location = new System.Drawing.Point(779, 242);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 116);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(887, 539);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvView);
@@ -310,10 +325,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhanVien";
             this.Text = "NhanVien";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmNhanVien_FormClosing);
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -343,5 +360,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

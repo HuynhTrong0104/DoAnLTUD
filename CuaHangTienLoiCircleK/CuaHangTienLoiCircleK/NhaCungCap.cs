@@ -50,6 +50,16 @@ namespace CuaHangTienLoiCircleK
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            string maNcc = txtMaNhaCungCap.Text.Trim();
+            string  diaChi= txtDiaChi.Text.Trim();
+            string  sdt = mtxtSDT.Text.Trim();
+            string  TenNCC = txtNhaCungCap.Text.Trim();
+
+            if (string.IsNullOrEmpty(maNcc) || string.IsNullOrEmpty(diaChi) || string.IsNullOrEmpty(sdt) || string.IsNullOrEmpty(TenNCC))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
                 SqlConnection conn = Connect.KetNoi();
@@ -113,23 +123,81 @@ namespace CuaHangTienLoiCircleK
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "CapNhapNCC";
-            cmd.Parameters.AddWithValue("@sManhacungcap", txtMaNhaCungCap.Text);
-            cmd.Parameters.AddWithValue("@Sodienthoai", mtxtSDT.Text);
-            cmd.Parameters.AddWithValue("@Diachi", txtDiaChi.Text);
-            cmd.Parameters.AddWithValue("@Tennhacungcap", txtNhaCungCap.Text);
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(txtMaNhaCungCap.Text) ||
+                string.IsNullOrWhiteSpace(txtNhaCungCap.Text) ||
+                string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
+                string.IsNullOrWhiteSpace(mtxtSDT.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            dgvView.DataSource = LoaiNCC();
+            try
+            {
+                // Kết nối cơ sở dữ liệu
+                using (SqlConnection conn = Connect.KetNoi())
+                {
+                    conn.Open();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "CapNhapNCC";
+
+                    // Thêm tham số
+                    cmd.Parameters.AddWithValue("@sManhacungcap", txtMaNhaCungCap.Text);
+                    cmd.Parameters.AddWithValue("@Tennhacungcap", txtNhaCungCap.Text);
+                    cmd.Parameters.AddWithValue("@Sodienthoai", mtxtSDT.Text);
+                    cmd.Parameters.AddWithValue("@Diachi", txtDiaChi.Text);
+
+                    // Thực thi stored procedure
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy nhà cung cấp để cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Lỗi SQL: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Làm mới dữ liệu
+                dgvView.DataSource = LoaiNCC();
+
+                // Xóa thông tin nhập liệu
+                txtMaNhaCungCap.Clear();
+                txtNhaCungCap.Clear();
+                txtDiaChi.Clear();
+                mtxtSDT.Clear();
+                txtMaNhaCungCap.Focus();
+            }
         }
+
 
         private void frmNhaCungCap_Load(object sender, EventArgs e)
         {
+            dgvView.ReadOnly = true;
+            dgvView.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvView.DataSource = LoaiNCC();
+        }
+
+        private void frmNhaCungCap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
         }
     }
 }

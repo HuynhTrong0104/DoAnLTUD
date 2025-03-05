@@ -24,10 +24,12 @@ namespace CuaHangTienLoiCircleK
 
         private void frmKhoHang_Load(object sender, EventArgs e)
         {
+            dgvView.ReadOnly = true;
+            dgvView.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvView.DataSource = LoadNhaKho();
             LoadCuaHang();
             LoadSanPham();
-        }   
+        }
         private DataTable LoadNhaKho()
         {
             datatable = new DataTable();
@@ -133,7 +135,6 @@ namespace CuaHangTienLoiCircleK
         {
             try
             {
-                // Kiểm tra nếu kết nối chưa được khởi tạo
                 if (conn == null)
                 {
                     MessageBox.Show("Kết nối cơ sở dữ liệu chưa được thiết lập.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -207,7 +208,7 @@ namespace CuaHangTienLoiCircleK
 
 
                 // Thực hiện kết nối và xóa dữ liệu
-                using (conn) 
+                using (conn)
                 {
                     conn.Open();
                     using (SqlCommand cmd = conn.CreateCommand())
@@ -253,18 +254,49 @@ namespace CuaHangTienLoiCircleK
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "CapNhapNhaKho";
-            cmd.Parameters.AddWithValue("@sMaSP", cboMaSP.Text);
-            cmd.Parameters.AddWithValue("@MaCH", cboMaCuaHang.Text);
-            cmd.Parameters.AddWithValue("@SoLuong", txtSoLuong.Text);
+            try
+            {
+                conn.Open(); // Mở kết nối
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "CapNhapNhaKho";
+                cmd.Parameters.AddWithValue("@sMaSP", cboMaSP.Text);
+                cmd.Parameters.AddWithValue("@MaCH", cboMaCuaHang.Text);
+                cmd.Parameters.AddWithValue("@SoLuong", txtSoLuong.Text);
 
-            cmd.ExecuteNonQuery();
-            conn.Close();
-            dgvView.DataSource = LoadNhaKho();
+                cmd.ExecuteNonQuery(); 
+                MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                dgvView.DataSource = LoadNhaKho();
+            }
+            catch (SqlException sqlEx)
+            {
+                // Xử lý lỗi từ SQL Server
+                MessageBox.Show($"Lỗi cơ sở dữ liệu: {sqlEx.Message}", "Lỗi SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi chung
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Đảm bảo đóng kết nối dù có lỗi hay không
+                if (conn != null && conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
         }
 
+
+        private void frmKhoHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+        }
     }
 }

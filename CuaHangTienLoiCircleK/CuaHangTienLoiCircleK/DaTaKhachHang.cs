@@ -12,7 +12,7 @@ namespace CuaHangTienLoiCircleK
     internal class DaTaKhachHang
     {
         SqlConnection sqlconn;
-        string s = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCHTLCIRCLEK;Integrated Security=True;Encrypt=False";
+        string s = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCUAHANGTLCIRCLEKS;Integrated Security=True";
         public DaTaKhachHang()
         {
             sqlconn = new SqlConnection(s);
@@ -49,7 +49,7 @@ namespace CuaHangTienLoiCircleK
 
         public int ThemKhachHang(string maKH, string tenKhachHang, string diachi, string sdt)
         {
-            int KQ = 1;
+            int KQ = -1;
             string themKhachHang = "ThemKHACHHANG";
             SqlCommand sqlCommand = new SqlCommand(themKhachHang, sqlconn);
             sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -60,27 +60,29 @@ namespace CuaHangTienLoiCircleK
             try
             {
                 KQ = sqlCommand.ExecuteNonQuery();
+                //MessageBox.Show(KQ.ToString());
             }
             catch (Exception ex)
             {
 
-                throw ex;
+                //throw ex;
             }
             return KQ;
         }
 
         public int SuaKhachHang(string maKH, string tenKhachHang, string diachi, string sdt)
         {
-            int KQ = 1;
-            string sua = "CapNhapKHACHHANG";
-            SqlCommand sqlCommand = new SqlCommand(sua, sqlconn);
-            sqlCommand.CommandType = CommandType.StoredProcedure;
-            sqlCommand.Parameters.AddWithValue("@MaKH", maKH);
-            sqlCommand.Parameters.AddWithValue("@TenKH", tenKhachHang);
-            sqlCommand.Parameters.AddWithValue("@DiaChiKH", diachi);
-            sqlCommand.Parameters.AddWithValue("@SDTKH", sdt);
+            int KQ = -1;
+            
             try
             {
+                string sua = "CapNhapKHACHHANG";
+                SqlCommand sqlCommand = new SqlCommand(sua, sqlconn);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("@MaKH", maKH);
+                sqlCommand.Parameters.AddWithValue("@TenKH", tenKhachHang);
+                sqlCommand.Parameters.AddWithValue("@DiaChiKH", diachi);
+                sqlCommand.Parameters.AddWithValue("@SDTKH", sdt);
                 KQ = sqlCommand.ExecuteNonQuery();
             }
             catch (Exception ex)

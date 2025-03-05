@@ -23,6 +23,8 @@ namespace CuaHangTienLoiCircleK
 
         private void frmHeThongCuaHang_Load(object sender, EventArgs e)
         {
+            dgvView.ReadOnly = true;
+            dgvView.EditMode = DataGridViewEditMode.EditProgrammatically;
             dgvView.DataSource = LoadCuaHang();
         }
 
@@ -55,89 +57,202 @@ namespace CuaHangTienLoiCircleK
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = $"select * from CUAHANGCIRCLEK where MaCH = '{txtMaCH.Text}'";
-            var reader = cmd.ExecuteReader();
+            try
+            {
+                // Mở kết nối
+                connection.Open();
 
-            if (reader.Read())
-            {
-                MessageBox.Show("MaCH đã tồn tại");
-                connection.Close();
-            }
-            else
-            {
-                connection.Close();
-                var conn = Connect.KetNoi();
-                conn.Open();
-                cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "ThemCHCIRCLEK";
+                // Tạo lệnh SQL sử dụng tham số
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM CUAHANGCIRCLEK WHERE MaCH = @MaCH";
                 cmd.Parameters.AddWithValue("@MaCH", txtMaCH.Text);
-                cmd.Parameters.AddWithValue("@DChi", txtDiaChi.Text);
-                cmd.Parameters.AddWithValue("@GiayPhep", txtGiayPhep.Text);
 
-                cmd.ExecuteNonQuery();
-                conn.Close();
+                // Kiểm tra MaCH tồn tại
+                var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    MessageBox.Show("Mã cửa hàng đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Đóng reader và kết nối sau khi kiểm tra
+                reader.Close();
+                connection.Close();
+
+                // Thêm mới
+                using (var conn = Connect.KetNoi())
+                {
+                    conn.Open();
+                    cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "ThemCHCIRCLEK";
+                    cmd.Parameters.Clear(); // Xóa tham số cũ
+                    cmd.Parameters.AddWithValue("@MaCH", txtMaCH.Text);
+                    cmd.Parameters.AddWithValue("@DChi", txtDiaChi.Text);
+                    cmd.Parameters.AddWithValue("@GiayPhep", txtGiayPhep.Text);
+
+                    cmd.ExecuteNonQuery();
+                    conn.Close();
+                }
+
+                // Thông báo thành công
+                MessageBox.Show("Thêm cửa hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Tải lại dữ liệu lên DataGridView
                 dgvView.DataSource = LoadCuaHang();
             }
+            catch (SqlException ex)
+            {
+                // Ngoại lệ liên quan đến SQL
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                // Ngoại lệ chung
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Đảm bảo đóng kết nối
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
         }
+
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             try
             {
-
+                // Kiểm tra nếu không nhập mã cửa hàng
                 string maCH = txtMaCH.Text.Trim();
+                if (string.IsNullOrEmpty(maCH))
+                {
+                    MessageBox.Show("Vui lòng nhập hoặc chọn Mã cửa hàng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Kết nối và thực thi lệnh xóa
                 connection.Open();
                 SqlCommand cmd = new SqlCommand("XoaCHCircleK", connection);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "XoaCHCircleK";
-                //cmd.Parameters.AddWithValue("@MaSP", maSP);
-                SqlParameter paMaSP = new SqlParameter("@MaCH", maCH);
-                cmd.Parameters.Add(paMaSP);
-                //cmd.ExecuteNonQuery();
-                if (cmd.ExecuteNonQuery() > 0)
+
+                cmd.Parameters.AddWithValue("@MaCH", maCH);
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Xóa thành công");
+                    MessageBox.Show("Xóa cửa hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Xóa thất bại");
+                    MessageBox.Show("Không tìm thấy cửa hàng để xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                connection.Close();
-
+            }
+            catch (SqlException ex)
+            {
+                // Lỗi SQL
+                MessageBox.Show($"Lỗi cơ sở dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Cần Phải chọn Cữa Hàng để xóa !", "Thông báo lỗi");
+                // Lỗi chung
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            finally
+            {
+                // Đảm bảo đóng kết nối
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+
+            // Cập nhật lại DataGridView
             dgvView.DataSource = LoadCuaHang();
         }
 
+
         private void btnSua_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlCommand cmd = connection.CreateCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "SuaCHCircleK";
-            cmd.Parameters.AddWithValue("@MaCH", txtMaCH.Text);
-            cmd.Parameters.AddWithValue("@DChi", txtDiaChi.Text);
-            cmd.Parameters.AddWithValue("@GiayPhep", txtGiayPhep.Text);
-            if (cmd.ExecuteNonQuery() > 0)
+            try
             {
-                MessageBox.Show("Sửa thành công");
+                // Kiểm tra nếu các trường dữ liệu bị trống
+                if (string.IsNullOrWhiteSpace(txtMaCH.Text) || string.IsNullOrWhiteSpace(txtDiaChi.Text) || string.IsNullOrWhiteSpace(txtGiayPhep.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Mở kết nối
+                connection.Open();
+
+                // Tạo lệnh SQL
+                SqlCommand cmd = connection.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SuaCHCircleK";
+
+                // Thêm tham số
+                cmd.Parameters.AddWithValue("@MaCH", txtMaCH.Text);
+                cmd.Parameters.AddWithValue("@DChi", txtDiaChi.Text);
+                cmd.Parameters.AddWithValue("@GiayPhep", txtGiayPhep.Text);
+
+                // Thực thi lệnh và kiểm tra kết quả
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Sửa thông tin cửa hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy cửa hàng để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (SqlException ex)
             {
-                MessageBox.Show("Sửa thất bại");
+                // Xử lý lỗi liên quan đến SQL
+                MessageBox.Show($"Lỗi cơ sở dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            cmd.ExecuteNonQuery();
-            connection.Close();
+            catch (Exception ex)
+            {
+                // Xử lý các lỗi khác
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Đảm bảo đóng kết nối
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+
+            // Cập nhật lại DataGridView
+            dgvView.DataSource = LoadCuaHang();
+        }
+
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtMaCH.Focus();
+            txtMaCH.Clear();
+            txtDiaChi.Clear();
+            txtGiayPhep.Clear();
             dgvView.DataSource = LoadCuaHang();
 
+        }
+
+        private void frmHeThongCuaHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
         }
     }
     

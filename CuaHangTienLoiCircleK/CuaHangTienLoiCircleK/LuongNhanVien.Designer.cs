@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtTangCa = new System.Windows.Forms.TextBox();
@@ -56,9 +57,11 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.dgvView = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,14 +80,14 @@
             this.dtpNgaySinh.Location = new System.Drawing.Point(162, 231);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(246, 26);
-            this.dtpNgaySinh.TabIndex = 40;
+            this.dtpNgaySinh.TabIndex = 4;
             // 
             // txtTangCa
             // 
             this.txtTangCa.Location = new System.Drawing.Point(593, 116);
             this.txtTangCa.Name = "txtTangCa";
             this.txtTangCa.Size = new System.Drawing.Size(246, 26);
-            this.txtTangCa.TabIndex = 39;
+            this.txtTangCa.TabIndex = 6;
             // 
             // label6
             // 
@@ -101,7 +104,7 @@
             this.txtMaLuong.Location = new System.Drawing.Point(162, 64);
             this.txtMaLuong.Name = "txtMaLuong";
             this.txtMaLuong.Size = new System.Drawing.Size(246, 26);
-            this.txtMaLuong.TabIndex = 35;
+            this.txtMaLuong.TabIndex = 1;
             // 
             // label2
             // 
@@ -138,7 +141,7 @@
             this.txtPhuCap.Location = new System.Drawing.Point(593, 64);
             this.txtPhuCap.Name = "txtPhuCap";
             this.txtPhuCap.Size = new System.Drawing.Size(246, 26);
-            this.txtPhuCap.TabIndex = 37;
+            this.txtPhuCap.TabIndex = 5;
             // 
             // label5
             // 
@@ -155,7 +158,7 @@
             this.txtTenNhanVien.Location = new System.Drawing.Point(162, 171);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(246, 26);
-            this.txtTenNhanVien.TabIndex = 42;
+            this.txtTenNhanVien.TabIndex = 3;
             // 
             // label7
             // 
@@ -169,10 +172,11 @@
             // 
             // txtTongLuong
             // 
+            this.txtTongLuong.Enabled = false;
             this.txtTongLuong.Location = new System.Drawing.Point(351, 295);
             this.txtTongLuong.Name = "txtTongLuong";
-            this.txtTongLuong.Size = new System.Drawing.Size(323, 26);
-            this.txtTongLuong.TabIndex = 44;
+            this.txtTongLuong.Size = new System.Drawing.Size(230, 26);
+            this.txtTongLuong.TabIndex = 9;
             this.txtTongLuong.Validating += new System.ComponentModel.CancelEventHandler(this.txtLuong_Validating);
             // 
             // label8
@@ -210,14 +214,14 @@
             this.txtThuong.Location = new System.Drawing.Point(593, 171);
             this.txtThuong.Name = "txtThuong";
             this.txtThuong.Size = new System.Drawing.Size(246, 26);
-            this.txtThuong.TabIndex = 47;
+            this.txtThuong.TabIndex = 7;
             // 
             // txtLuongCoBan
             // 
             this.txtLuongCoBan.Location = new System.Drawing.Point(593, 224);
             this.txtLuongCoBan.Name = "txtLuongCoBan";
             this.txtLuongCoBan.Size = new System.Drawing.Size(246, 26);
-            this.txtLuongCoBan.TabIndex = 48;
+            this.txtLuongCoBan.TabIndex = 8;
             // 
             // cboMaNV
             // 
@@ -225,7 +229,7 @@
             this.cboMaNV.Location = new System.Drawing.Point(162, 115);
             this.cboMaNV.Name = "cboMaNV";
             this.cboMaNV.Size = new System.Drawing.Size(246, 27);
-            this.cboMaNV.TabIndex = 49;
+            this.cboMaNV.TabIndex = 2;
             this.cboMaNV.SelectedIndexChanged += new System.EventHandler(this.cboMaNV_SelectedIndexChanged);
             // 
             // pictureBox1
@@ -257,10 +261,10 @@
             this.btnQuayLai.BackColor = System.Drawing.Color.DarkRed;
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuayLai.ForeColor = System.Drawing.Color.White;
-            this.btnQuayLai.Location = new System.Drawing.Point(755, 395);
+            this.btnQuayLai.Location = new System.Drawing.Point(604, 337);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(106, 29);
-            this.btnQuayLai.TabIndex = 53;
+            this.btnQuayLai.Size = new System.Drawing.Size(106, 37);
+            this.btnQuayLai.TabIndex = 13;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
@@ -270,10 +274,10 @@
             this.btnThem.BackColor = System.Drawing.Color.DarkRed;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(184, 333);
+            this.btnThem.Location = new System.Drawing.Point(129, 337);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(106, 37);
-            this.btnThem.TabIndex = 52;
+            this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -283,10 +287,10 @@
             this.btnXoa.BackColor = System.Drawing.Color.DarkRed;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(384, 333);
+            this.btnXoa.Location = new System.Drawing.Point(287, 337);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(106, 37);
-            this.btnXoa.TabIndex = 51;
+            this.btnXoa.TabIndex = 10;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -296,22 +300,34 @@
             this.btnSua.BackColor = System.Drawing.Color.DarkRed;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(602, 333);
+            this.btnSua.Location = new System.Drawing.Point(456, 337);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(106, 37);
-            this.btnSua.TabIndex = 50;
+            this.btnSua.TabIndex = 12;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // dgvView
             // 
+            this.dgvView.AllowUserToAddRows = false;
+            this.dgvView.AllowUserToDeleteRows = false;
             this.dgvView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvView.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dgvView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvView.Location = new System.Drawing.Point(0, 430);
             this.dgvView.Name = "dgvView";
+            this.dgvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvView.Size = new System.Drawing.Size(873, 209);
             this.dgvView.TabIndex = 56;
             this.dgvView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvView_CellClick);
@@ -320,12 +336,26 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::CuaHangTienLoiCircleK.Properties.Resources.logo1;
+            this.pictureBox2.Location = new System.Drawing.Point(765, 308);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 116);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 57;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmLuongNhanVien
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
+            this.CancelButton = this.btnQuayLai;
             this.ClientSize = new System.Drawing.Size(873, 639);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dgvView);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
@@ -356,10 +386,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLuongNhanVien";
             this.Text = "LuongNhanVien";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLuongNhanVien_FormClosing);
             this.Load += new System.EventHandler(this.frmLuongNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,5 +426,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.DataGridView dgvView;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

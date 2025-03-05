@@ -20,7 +20,7 @@ namespace CuaHangTienLoiCircleK
 
         public SqlConnection KetNoi()
         {
-            string sqlcon = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCHTLCIRCLEK;Integrated Security=True;Encrypt=False";
+            string sqlcon = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCUAHANGTLCIRCLEKS;Integrated Security=True";
             return new SqlConnection(sqlcon);  
         }
         public DBKetNoi() { }

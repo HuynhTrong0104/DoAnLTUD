@@ -43,10 +43,13 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnLamMoi = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -95,21 +98,21 @@
             this.txtMaCH.Location = new System.Drawing.Point(194, 114);
             this.txtMaCH.Name = "txtMaCH";
             this.txtMaCH.Size = new System.Drawing.Size(230, 26);
-            this.txtMaCH.TabIndex = 4;
+            this.txtMaCH.TabIndex = 1;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(194, 182);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(230, 26);
-            this.txtDiaChi.TabIndex = 5;
+            this.txtDiaChi.TabIndex = 2;
             // 
             // txtGiayPhep
             // 
             this.txtGiayPhep.Location = new System.Drawing.Point(194, 257);
             this.txtGiayPhep.Name = "txtGiayPhep";
             this.txtGiayPhep.Size = new System.Drawing.Size(230, 26);
-            this.txtGiayPhep.TabIndex = 6;
+            this.txtGiayPhep.TabIndex = 3;
             // 
             // dgvView
             // 
@@ -119,6 +122,7 @@
             this.dgvView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvView.Location = new System.Drawing.Point(0, 404);
             this.dgvView.Name = "dgvView";
+            this.dgvView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvView.Size = new System.Drawing.Size(884, 215);
             this.dgvView.TabIndex = 7;
             this.dgvView.Click += new System.EventHandler(this.dgvView_Click);
@@ -126,12 +130,13 @@
             // btnQuayLai
             // 
             this.btnQuayLai.BackColor = System.Drawing.Color.DarkRed;
+            this.btnQuayLai.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuayLai.ForeColor = System.Drawing.Color.White;
             this.btnQuayLai.Location = new System.Drawing.Point(763, 315);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(106, 29);
-            this.btnQuayLai.TabIndex = 17;
+            this.btnQuayLai.TabIndex = 8;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
@@ -141,10 +146,10 @@
             this.btnThem.BackColor = System.Drawing.Color.DarkRed;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(475, 165);
+            this.btnThem.Location = new System.Drawing.Point(462, 136);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(106, 43);
-            this.btnThem.TabIndex = 16;
+            this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -154,10 +159,10 @@
             this.btnXoa.BackColor = System.Drawing.Color.DarkRed;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(624, 165);
+            this.btnXoa.Location = new System.Drawing.Point(611, 136);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(106, 43);
-            this.btnXoa.TabIndex = 15;
+            this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -167,10 +172,10 @@
             this.btnSua.BackColor = System.Drawing.Color.DarkRed;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(763, 165);
+            this.btnSua.Location = new System.Drawing.Point(462, 224);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(106, 43);
-            this.btnSua.TabIndex = 14;
+            this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -190,6 +195,19 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.BackColor = System.Drawing.Color.DarkRed;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(611, 224);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(106, 43);
+            this.btnLamMoi.TabIndex = 7;
+            this.btnLamMoi.Text = "Làm Mới";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
@@ -203,12 +221,27 @@
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::CuaHangTienLoiCircleK.Properties.Resources.logo1;
+            this.pictureBox2.Location = new System.Drawing.Point(773, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(96, 116);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
+            // 
             // frmHeThongCuaHang
             // 
+            this.AcceptButton = this.btnThem;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Brown;
+            this.CancelButton = this.btnQuayLai;
             this.ClientSize = new System.Drawing.Size(884, 619);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnQuayLai);
@@ -227,10 +260,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHeThongCuaHang";
             this.Text = "HeThongCuaHang";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHeThongCuaHang_FormClosing);
             this.Load += new System.EventHandler(this.frmHeThongCuaHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +288,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

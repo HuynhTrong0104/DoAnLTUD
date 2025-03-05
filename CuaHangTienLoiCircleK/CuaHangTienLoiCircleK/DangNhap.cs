@@ -86,5 +86,14 @@ namespace CuaHangTienLoiCircleK
             MessageBox.Show("Tk: admin", "Thông Báo");
             MessageBox.Show("Pass: admin", "Thông Báo");
         }
+
+        private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+        }
     }
 }

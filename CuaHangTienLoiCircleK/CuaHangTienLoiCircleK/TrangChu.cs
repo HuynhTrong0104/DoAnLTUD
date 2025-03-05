@@ -20,10 +20,10 @@ namespace CuaHangTienLoiCircleK
     
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }    
+        //private void label1_Click(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}    
 
         private void cửaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -39,10 +39,10 @@ namespace CuaHangTienLoiCircleK
         private void frmTrangChu_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult = MessageBox.Show("Do You Want To Close?", "EXIT", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(DialogResult == DialogResult.Yes) 
+            if (DialogResult == DialogResult.Yes)
             {
                 e.Cancel = false;
-            }else e.Cancel = true;
+            }
         }
 
         private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,32 +96,46 @@ namespace CuaHangTienLoiCircleK
 
         private void doanhThuSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDoanhThuSanPham frmDoanhThuSanPham = new frmDoanhThuSanPham();
+            frmThongKeSanPham frmDoanhThuSanPham = new frmThongKeSanPham();
             frmDoanhThuSanPham.Show();
         }
 
+        // MARK: should be "Thống kê khách hàng"
         private void kháchHàngToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmDoanhThuKhachHang frmDoanhThuKhachHang = new frmDoanhThuKhachHang();
+            frmThongKeKHDaMua frmDoanhThuKhachHang = new frmThongKeKHDaMua();
             frmDoanhThuKhachHang.Show();
         }
 
         private void inNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInNhanVien frmInNhanVien = new frmInNhanVien();
-            frmInNhanVien.Show();
+            frmInDanhSachNhanVienK fr = new frmInDanhSachNhanVienK();
+            fr.Show();
         }
 
         private void inKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmInKhachHang frmInKhachHang = new frmInKhachHang();
-            frmInKhachHang.Show();
+            frmInDanhSachKhachHangK fr = new frmInDanhSachKhachHangK();
+            fr.Show();
+
         }
 
         private void inHóaĐơnToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmInHoaDon frmInHoaDon = new frmInHoaDon();
-            frmInHoaDon.Show();
+            frmInHoaDonKhachHang fr = new frmInHoaDonKhachHang();
+            fr.Show();  
+        }
+
+        private void inHóaĐơnToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmInHoaDonTheoMaHD fr = new frmInHoaDonTheoMaHD();
+            fr.Show();
+        }
+
+        private void inThốngKêSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmInThongKeDSSanPham fr = new frmInThongKeDSSanPham();
+            fr.Show();
         }
     }
 }

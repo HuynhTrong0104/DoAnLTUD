@@ -11,7 +11,7 @@ namespace CuaHangTienLoiCircleK
     internal class DataHoaDon
     {
         SqlConnection sqlconn;
-        string s = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCHTLCIRCLEK;Integrated Security=True;Encrypt=False";
+        string s = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCUAHANGTLCIRCLEKS;Integrated Security=True";
         public DataHoaDon()
         {
             sqlconn = new SqlConnection(s);

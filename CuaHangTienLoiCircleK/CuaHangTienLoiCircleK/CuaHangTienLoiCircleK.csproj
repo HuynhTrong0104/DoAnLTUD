@@ -33,10 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -65,17 +71,83 @@
     <Compile Include="DataHoaDon.cs" />
     <Compile Include="DaTaKhachHang.cs" />
     <Compile Include="DBKetNoi.cs" />
-    <Compile Include="DoanhThuKhachHang.cs">
+    <Compile Include="InDanhSachKhachHangCirCleK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InDanhSachKhachHangCirCleK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InDanhSachKhachHangK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoanhThuKhachHang.Designer.cs">
-      <DependentUpon>DoanhThuKhachHang.cs</DependentUpon>
+    <Compile Include="InDanhSachKhachHangK.Designer.cs">
+      <DependentUpon>InDanhSachKhachHangK.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoanhThuSanPham.cs">
+    <Compile Include="InDanhSachNhanVienK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoanhThuSanPham.Designer.cs">
-      <DependentUpon>DoanhThuSanPham.cs</DependentUpon>
+    <Compile Include="InDanhSachNhanVienK.Designer.cs">
+      <DependentUpon>InDanhSachNhanVienK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InDSKhachHang1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InDSKhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InDSNhanVienCIRCLEK.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InDSNhanVienCIRCLEK.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InHoaDon.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InHoaDon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InHoaDonKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InHoaDonKhachHang.Designer.cs">
+      <DependentUpon>InHoaDonKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InHoaDonKhachHang1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InHoaDonKhachHang.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InHoaDonTheoMaHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InHoaDonTheoMaHD.Designer.cs">
+      <DependentUpon>InHoaDonTheoMaHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InThongKeDSSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InThongKeDSSanPham.Designer.cs">
+      <DependentUpon>InThongKeDSSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InThongKeSanPham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InThongKeSanPham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThongKeDSKHDaMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeDSKHDaMua.Designer.cs">
+      <DependentUpon>ThongKeDSKHDaMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKeSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKeSanPham.Designer.cs">
+      <DependentUpon>ThongKeSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="HeThongCuaHang.cs">
       <SubType>Form</SubType>
@@ -89,23 +161,11 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="InHoaDon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InHoaDon.Designer.cs">
-      <DependentUpon>InHoaDon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InKhachHang.Designer.cs">
-      <DependentUpon>InKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="InNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InNhanVien.Designer.cs">
-      <DependentUpon>InNhanVien.cs</DependentUpon>
+    <Compile Include="InDSKhachHangDaMua.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InDSKhachHangDaMua.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="KhachHang.cs">
       <SubType>Form</SubType>
@@ -164,11 +224,50 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuKhachHang.resx">
-      <DependentUpon>DoanhThuKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="InDanhSachKhachHangCirCleK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InDanhSachKhachHangCirCleK.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoanhThuSanPham.resx">
-      <DependentUpon>DoanhThuSanPham.cs</DependentUpon>
+    <EmbeddedResource Include="InDanhSachKhachHangK.resx">
+      <DependentUpon>InDanhSachKhachHangK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InDanhSachNhanVienK.resx">
+      <DependentUpon>InDanhSachNhanVienK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InDSKhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InDSKhachHang1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InDSNhanVienCIRCLEK.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InDSNhanVienCIRCLEK.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InHoaDon.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonKhachHang.resx">
+      <DependentUpon>InHoaDonKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonKhachHang.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InHoaDonKhachHang1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InHoaDonTheoMaHD.resx">
+      <DependentUpon>InHoaDonTheoMaHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InThongKeDSSanPham.resx">
+      <DependentUpon>InThongKeDSSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InThongKeSanPham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InThongKeSanPham.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeDSKHDaMua.resx">
+      <DependentUpon>ThongKeDSKHDaMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKeSanPham.resx">
+      <DependentUpon>ThongKeSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HeThongCuaHang.resx">
       <DependentUpon>HeThongCuaHang.cs</DependentUpon>
@@ -176,14 +275,9 @@
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InHoaDon.resx">
-      <DependentUpon>InHoaDon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InKhachHang.resx">
-      <DependentUpon>InKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InNhanVien.resx">
-      <DependentUpon>InNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="InDSKhachHangDaMua.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InDSKhachHangDaMua.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>
@@ -255,6 +349,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\unnamed.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dairy-products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grouping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options-lines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

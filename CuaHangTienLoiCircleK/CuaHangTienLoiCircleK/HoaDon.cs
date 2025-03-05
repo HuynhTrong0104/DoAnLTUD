@@ -19,9 +19,37 @@ namespace CuaHangTienLoiCircleK
             InitializeComponent();
         }
         SqlConnection connection = Connect.KetNoi();
+        private void KhoaTab(TabPage tabPage)
+        {
+            foreach (Control control in tabPage.Controls)
+            {
+                if (control is DataGridView dgv)
+                {
+                    dgv.ReadOnly = true;
+                    dgv.AllowUserToAddRows = false;
+                    dgv.AllowUserToDeleteRows = false;
+                    dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
+                }
+                else if (control is TextBox txt)
+                {
+                    txt.ReadOnly = true;
+                }
+                else if (control is ComboBox cbo)
+                {
+                    cbo.Enabled = false;
+                }
+                // Thêm các loại control khác nếu cần
+            }
+        }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            dgvView.ReadOnly = true;
+            dgvView.EditMode = DataGridViewEditMode.EditProgrammatically;
+            foreach (TabPage tabPage in tabView.TabPages)
+            {
+                KhoaTab(tabPage);
+            }
             KhoiTaoKhachHangComboBox();
             KhoiTaoNhanVienComboBox();
             KhoiTaoPhuongThucThanhToanComboBox();
@@ -41,6 +69,9 @@ namespace CuaHangTienLoiCircleK
                 tab.Text = tennhacc;
                 tab.Tag = manhacc;
                 DataGridView dgv = new DataGridView();
+                dgv.ReadOnly = true;
+                dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 tab.Controls.Add(dgv);
                 tab.Enter += Tab_Enter;
                 tabView.TabPages.Add(tab);
@@ -128,13 +159,13 @@ namespace CuaHangTienLoiCircleK
             var row = dgv.Rows[e.RowIndex];
             string masp = row.Cells["MaSP"].Value.ToString();
             bool tangchua = false;
-            for (int i = 0; i < dgv.Rows.Count - 1; i++)
+            for (int i = 0; i < dgvView.Rows.Count - 1; i++)
             {
-                if (masp == dgv.Rows[i].Cells["maSp"].Value.ToString())
+                if (masp == dgvView.Rows[i].Cells["maSp"].Value.ToString())
                 {
-                    int soluong = int.Parse(dgv.Rows[i].Cells["soLuong"].Value.ToString());
+                    int soluong = int.Parse(dgvView.Rows[i].Cells["soLuong"].Value.ToString());
                     soluong++;
-                    dgv.Rows[i].Cells["soLuong"].Value = soluong;
+                    dgvView.Rows[i].Cells["soLuong"].Value = soluong;
                     tangchua = true;
                     break;
                 }
@@ -143,7 +174,7 @@ namespace CuaHangTienLoiCircleK
             {
                 string tensp = row.Cells["TenSP"].Value.ToString();
                 string giasp = row.Cells["GiaSP"].Value.ToString();
-                dgv.Rows.Add(masp, tensp, giasp, 1, giasp);
+                dgvView.Rows.Add(masp, tensp, giasp, 1, giasp);
                 //txtTongTien.Text = TinhTongTien().ToString();
             }
             int soLuong = int.Parse(row.Cells["soluong"].Value.ToString());
@@ -178,64 +209,16 @@ namespace CuaHangTienLoiCircleK
         }
 
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
-{
-    // Kiểm tra chỉ số dòng và cột hợp lệ
-    if (e.RowIndex < 0 || e.ColumnIndex < 0) return;
-
-    var dgv = sender as DataGridView;
-    var row = dgv.Rows[e.RowIndex];
-
-    // Kiểm tra dữ liệu trong ô
-    if (row.Cells["MaSP"].Value == null || row.Cells["TenSP"].Value == null || row.Cells["GiaSP"].Value == null)
-    {
-        MessageBox.Show("Dữ liệu không hợp lệ");
-        return;
-    }
-
-    string masp = row.Cells["MaSP"].Value.ToString();
-    string tensp = row.Cells["TenSP"].Value.ToString();
-    string giasp = row.Cells["GiaSP"].Value.ToString();
-
-    bool tangchua = false;
-
-    // Kiểm tra nếu sản phẩm đã tồn tại trong dgvView
-    for (int i = 0; i < dgvView.Rows.Count; i++)
-    {
-        if (!dgvView.Rows[i].IsNewRow && masp == dgvView.Rows[i].Cells["maSp"].Value.ToString())
         {
-            int soluong = int.Parse(dgvView.Rows[i].Cells["soLuong"].Value.ToString());
-            soluong++;
-            dgvView.Rows[i].Cells["soLuong"].Value = soluong;
-            tangchua = true;
-            break;
+
         }
-    }
-
-    // Nếu sản phẩm chưa tồn tại, thêm sản phẩm mới
-    if (!tangchua)
-    {
-        dgvView.Rows.Add(masp, tensp, giasp, 1, giasp);
-    }
-
-    // Giảm số lượng sản phẩm trong dgvHoaDon
-    int soLuong = int.Parse(row.Cells["soLuong"].Value.ToString());
-    if (soLuong > 0)
-    {
-        soLuong--;
-        row.Cells["soLuong"].Value = soLuong;
-    }
-    else
-    {
-        MessageBox.Show("Số lượng không đủ để trừ");
-    }
-}
-
 
         private void btnXoaChiTietDonHang_Click(object sender, EventArgs e)
         {
             var rowIndex = dgvView.SelectedCells[0].RowIndex;
 
             dgvView.Rows.RemoveAt(rowIndex);
+            //dgvView.DataSource 
         }
 
         private void dgvHoaDon_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -244,31 +227,62 @@ namespace CuaHangTienLoiCircleK
             int soLuong = int.Parse(row.Cells["soLuong"].Value.ToString());
             double donGia = double.Parse(row.Cells["donGia"].Value.ToString());
             row.Cells["thanhTien"].Value = donGia * soLuong;
-            txtTongTien.Text = TinhTongTien().ToString();
-        }
+            txtSoTien.Text = TinhTongTien().ToString();
 
+        }
+        public bool KiemTraDuLieuDauVao()
+        {
+            errorProvider1.Clear();
+
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(cboMaKH.Text))
+            {
+                errorProvider1.SetError(cboMaKH, "Vui lòng chọn Mã Khách Hàng.");
+                isValid = false;
+
+            }
+
+            if (string.IsNullOrWhiteSpace(cboMaNV.Text))
+            {
+                errorProvider1.SetError(cboMaNV, "Vui lòng chọn Mã Nhân Viên.");
+                isValid = false;
+            }
+
+
+            if (string.IsNullOrWhiteSpace(txtGiamGia.Text) || !double.TryParse(txtGiamGia.Text, out _))
+            {
+                errorProvider1.SetError(txtGiamGia, "Vui lòng nhập Giảm Giá hợp lệ.");
+                isValid = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(cboPTThanhToan.Text))
+            {
+                errorProvider1.SetError(cboPTThanhToan, "Vui lòng chọn Phương Thức Thanh Toán.");
+                isValid = false;
+            }
+
+            if (dgvView.Rows.Count <= 1) // Chỉ có dòng trống
+            {
+                MessageBox.Show("Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.", "Lỗi");
+                isValid = false;
+            }
+            return isValid;
+        }
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             try
             {
+                if (!KiemTraDuLieuDauVao())
+                {
+                    return;
+                }
                 double tong = TinhTongTien();
 
-                if (string.IsNullOrEmpty(cboMaKH.Text) || string.IsNullOrEmpty(cboMaNV.Text) ||
-                    string.IsNullOrEmpty(cboPTThanhToan.Text) || string.IsNullOrEmpty(txtGiamGia.Text) ||
-                    string.IsNullOrEmpty(txtTongTien.Text))
-                {
-                    MessageBox.Show("Vui lòng điền đầy đủ thông tin trước khi thanh toán.");
-                    return;
-                }
-
-                double giamGia;
-                if (!double.TryParse(txtGiamGia.Text, out giamGia))
-                {
-                    MessageBox.Show("Giảm giá không hợp lệ.");
-                    return;
-                }
-
+                // Mở kết nối một lần
                 connection.Open();
+
+                // Thực thi lệnh thêm hóa đơn
                 var cmd = connection.CreateCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "ThemHoaDon";
@@ -276,25 +290,65 @@ namespace CuaHangTienLoiCircleK
                 cmd.Parameters.AddWithValue("@MaKH", cboMaKH.Text);
                 cmd.Parameters.AddWithValue("@MaNV", cboMaNV.Text);
                 cmd.Parameters.AddWithValue("@NgayXuat", DateTime.Now);
-                cmd.Parameters.AddWithValue("@TongTien", tong);
+                cmd.Parameters.AddWithValue("@SoTien", Convert.ToDouble(txtSoTien.Text)); 
                 cmd.Parameters.AddWithValue("@PhuongThucThanhToan", cboPTThanhToan.Text);
-                cmd.Parameters.AddWithValue("@GiamGia", giamGia);
-                cmd.Parameters.AddWithValue("@TienSauKhiGiam", txtTongTien.Text);
+                cmd.Parameters.AddWithValue("@GiamGia", Convert.ToDouble(txtGiamGia.Text)); 
+                cmd.Parameters.AddWithValue("@TongTien", Convert.ToDouble(txtTongTien.Text));
 
-                object maHDObj = cmd.ExecuteScalar();
-                if (maHDObj == null)
+                var reader = cmd.ExecuteReader();
+                reader.Read();
+                string maHD = reader["MaHD"].ToString(); 
+                reader.Close();
+
+                // Thực thi lệnh thêm chi tiết hóa đơn
+                foreach (DataGridViewRow row in dgvView.Rows)
                 {
-                    MessageBox.Show("Không thể tạo hóa đơn. Vui lòng kiểm tra lại.");
-                    return;
+                    if (row.IsNewRow) continue; // Bỏ qua dòng trống
+
+                    var cmd2 = connection.CreateCommand();
+                    cmd2.CommandType = CommandType.StoredProcedure;
+                    cmd2.CommandText = "ThemChiTietHoaDon";
+                    cmd2.Parameters.AddWithValue("@MaHD", maHD);
+                    cmd2.Parameters.AddWithValue("@MaSP", row.Cells["maSp"].Value.ToString());
+                    cmd2.Parameters.AddWithValue("@SoLuong", Convert.ToInt32(row.Cells["soLuong"].Value)); 
+                    cmd2.Parameters.AddWithValue("@ThanhTien", Convert.ToDouble(row.Cells["thanhTien"].Value)); 
+                    cmd2.ExecuteNonQuery();
                 }
-                maHD = maHDObj.ToString();
+
+                // Cập nhật kho
+                foreach (DataGridViewRow row in dgvView.Rows)
+                {
+                    if (row.IsNewRow) continue; // Bỏ qua dòng trống
+
+                    string maCH = cbCuaHang.SelectedValue.ToString();
+                    int soLuong = Convert.ToInt32(row.Cells["soLuong"].Value); 
+                    string maSP = row.Cells["maSp"].Value.ToString();
+
+                    var cmd3 = connection.CreateCommand();
+                    cmd3.CommandType = CommandType.Text;
+                    cmd3.CommandText = "UPDATE NHAKHO SET SoLuong = SoLuong - @SoLuong " +
+                                       "WHERE NHAKHO.MaSP = @MaSP AND NHAKHO.MaCH = @MaCH";
+
+                    cmd3.Parameters.AddWithValue("@SoLuong", soLuong);
+                    cmd3.Parameters.AddWithValue("@MaSP", maSP);
+                    cmd3.Parameters.AddWithValue("@MaCH", maCH);
+
+                    cmd3.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Thanh Toán Thành Công");
+
+                // Làm mới DataGridView sau khi thanh toán
+                var dgv = tabView.SelectedTab.Controls[0] as DataGridView;
+                dgv.DataSource = LoadSanPhamTheoNCC(tabView.SelectedTab);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show("Đã có lỗi xảy ra: " + ex.Message);
             }
             finally
             {
+                // Đảm bảo kết nối luôn được đóng
                 if (connection.State == ConnectionState.Open)
                 {
                     connection.Close();
@@ -303,44 +357,101 @@ namespace CuaHangTienLoiCircleK
         }
 
 
+        //private double TinhTongTien()
+        //{
+        //    double tong = 0;
+
+        //    for (int i = 0; i < dgvView.Rows.Count - 1; i++)
+        //    {
+        //        tong += double.Parse(dgvView.Rows[i].Cells["sotien"].Value.ToString());
+
+        //    }
+        //    return tong;
+        //}
+
+        //private void btnInHoaDon_Click(object sender, EventArgs e)
+        //{
+        //    frmInHoaDon frmInHoa = new frmInHoaDon(maHD, txtTongTien.Text, cbPTThanhToan.Text, txtGiamGia.Text, txtSauKhiGiamGia.Text, cbCuaHang.Text);
+        //    frmInHoa.Show();
+        //    ClearForm();
+        //}
+
         private double TinhTongTien()
         {
             double tong = 0;
 
-            for (int i = 0; i < dgvView.Rows.Count - 1; i++)
+            foreach (DataGridViewRow row in dgvView.Rows)
             {
-                tong += double.Parse(dgvView.Rows[i].Cells["thanhTien"].Value.ToString());
+                if (row.IsNewRow) continue;
 
+                var cellValue = row.Cells["thanhTien"].Value;
+                if (cellValue != null && double.TryParse(cellValue.ToString(), out double soTien))
+                {
+                    tong += soTien;
+                }
             }
+
             return tong;
         }
 
-        private void btnInHoaDon_Click(object sender, EventArgs e)
-        {
-            //frmInHoaDon frmInHoa = new frmInHoaDon(maHD, txtTongTien.Text, cbPTThanhToan.Text, txtGiamGia.Text, txtSauKhiGiamGia.Text, cbCuaHang.Text);
-            //frmInHoa.Show();
-            //ClearForm();
-        }
 
-        private void btnXoaChiTietDonHang_Leave(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtGiamGia_Leave(object sender, EventArgs e)
         {
-            double tongTien = TinhTongTien();
-            int giamGia = int.Parse(txtGiamGia.Text);
-            txtTongTien.Text = (tongTien * (100 - giamGia) / 100).ToString();
+            try
+            {
+                double sotien = TinhTongTien();
 
+                // Kiểm tra và xử lý giảm giá hợp lệ
+                if (int.TryParse(txtGiamGia.Text, out int giamGia) && giamGia >= 0 && giamGia <= 100)
+                {
+                    double tongSauGiam = sotien * (100 - giamGia) / 100;
+                    txtTongTien.Text = tongSauGiam.ToString(); // Hiển thị 2 chữ số thập phân
+                }
+                else
+                {
+                    MessageBox.Show("Giảm giá không hợp lệ. Vui lòng nhập giá trị từ 0 đến 100.", "Lỗi");
+                    txtGiamGia.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi");
+            }
         }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnQuayLai_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         private void ClearForm()
         {
             dgvView.Rows.Clear();
             txtGiamGia.Clear();
             txtTongTien.Clear();
-            txtTongTien.Clear();
+            txtSoTien.Clear();
+        }
+
+        private void frmHoaDon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+        }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            frmInHoaDonKhachHang inhoadon = new frmInHoaDonKhachHang();
+            inhoadon.Show();
         }
     }
 }

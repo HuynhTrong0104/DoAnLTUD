@@ -9,7 +9,7 @@ namespace CuaHangTienLoiCircleK
 {
     internal class Connect
     {
-        private static string conn = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCHTLCIRCLEK;Integrated Security=True;Encrypt=False";
+        private static string conn = "Data Source=HUYNHTRONG\\MAYA0;Initial Catalog=QLCUAHANGTLCIRCLEKS;Integrated Security=True";
         public static SqlConnection KetNoi()
         {
             return new SqlConnection(conn);
